@@ -4,8 +4,8 @@ import { createBooking, getAllBooking, getBooking } from '../controllers/booking
 
 const router = express.Router()
 
-router.post('/api/v1/' , verifyUser ,createBooking);
-router.get('/api/v1/:id' , verifyUser ,getBooking);
-router.get('/api/v1/' , verifyAdmin ,getAllBooking);
+router.post('/' , verifyUser ,createBooking);
+router.get('/:id' , verifyUser ,getBooking);
+router.get('/' , verifyAdmin ,getAllBooking);
 
 export default router
