@@ -17,7 +17,7 @@ const corsOptions = {
     credentials:true
 }
 
-// database connection
+// database connection 
 mongoose.set("strictQuery", false);
 const connect = async()=>{
     try{
@@ -30,6 +30,9 @@ const connect = async()=>{
         console.log("MongoDB database connection failed");
     }
 };
+app.get("/",(req,res)=>{
+    res.send("api is working")
+});
 //middleware
 app.use(express.json());
 app.use(cors(corsOptions));
