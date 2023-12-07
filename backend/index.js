@@ -43,7 +43,11 @@ app.use('/api/v1/auth',authRoute);
 app.use('/api/v1/review',reviewRoute);
 app.use('/api/v1/booking',bookingRoute);
 
-
+const corsOptions = {
+    origin: 'https://tour-booking-website-md1t.vercel.app',
+    credentials: true
+}
+app.use(cors(corsOptions));
 app.listen(port , ()=>{
     connect();
     console.log('Server listening on port' ,port);
