@@ -1,1 +1,1 @@
-export const BASE_URL = "https://tour-booking-website.vercel.app/"
+export const BASE_URL = `https://tourapp-lupo.onrender.com/api/v1`
